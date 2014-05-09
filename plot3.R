@@ -6,7 +6,7 @@ data_one_and_two_feb_2007 <- subset(data, Date == "1/2/2007" | Date == "2/2/2007
 
 #combine date and time
 data_one_and_two_feb_2007$DateTime <- as.POSIXct(paste(data_one_and_two_feb_2007$Date, data_one_and_two_feb_2007$Time), format="%d/%m/%Y %H:%M:%S", tz="UTC")
-head(data_one_and_two_feb_2007)
+
 # the plot
 plot(Sub_metering_1 ~ DateTime, data=data_one_and_two_feb_2007, ylab = "Energy sub metering", xlab="", type="l")
 lines(Sub_metering_2 ~ DateTime, data=data_one_and_two_feb_2007, lwd=1, col="red")
