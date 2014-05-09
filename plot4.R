@@ -1,6 +1,4 @@
 ## plot4.R
-#assignmentsdir <- "/Users/kgeusebroek/dev/xebia/coursera/exdata-002/assessments/week1"
-#setwd(assignmentsdir)
 data <- read.csv(file="household_power_consumption.txt", header=T, sep=";", colClasses=c("character", "character", "double", "double", "double", "double", "double", "double", "double"), na.string="?")
 data_one_and_two_feb_2007 <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 
@@ -24,5 +22,5 @@ legend(x="topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_
 #fourth plot
 plot(Global_reactive_power ~ DateTime, data=data_one_and_two_feb_2007, xlab="datetime", type="l", lwd=1)
 
-dev.copy(png, filename="ExData_Plotting1/plot4.png", width=480, height=480)
+dev.copy(png, filename="plot4.png", width=480, height=480)
 dev.off()
